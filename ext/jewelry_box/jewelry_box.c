@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- * Copyright (c) 2014 John Bellone <john.bellone.jr@gmail.com>
+ * Copyright (c) 2013, 2014 John Bellone <john.bellone.jr@gmail.com>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,9 +21,18 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-#ifndef H_JEWERLY_BOX
-#define H_JEWLERY_BOX
 
-#include <ruby.h>
+#include "jewelry_box.h"
 
-#endif
+void Init_jewelry_error(VALUE rb_mJewelryBox) {
+    VALUE rb_eJewelryError =
+        rb_define_class_under(rb_mJewelryBox, "Error", rb_eStandardError);
+
+}
+
+/*
+ * Initialize the module for Jewelry Box.
+ */
+void Init_jewelry_box(void) {
+    VALUE rb_mJewelryBox = rb_define_module("JewelryBox");
+}
