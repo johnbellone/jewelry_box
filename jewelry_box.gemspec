@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = '>= 1.3.6'
   s.rubyforge_project = 'jewelry_box'
 
-  s.add_development_dependency 'bundler', '~> 1.5'
+  s.add_development_dependency 'bundler', '~> 1.3'
   s.add_development_dependency 'rake'
   s.add_development_dependency 'minitest'
   s.add_development_dependency 'pry-debugger'
